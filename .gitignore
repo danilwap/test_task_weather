@@ -5,3 +5,4 @@ src/.cache.sqlite
 src/config.py
 src/weather/.cache.sqlite
 src/weather/__pycache__/
+venv

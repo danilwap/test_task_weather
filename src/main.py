@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi.responses import RedirectResponse
+from  fastapi.responses import RedirectResponse
 from pages.router import router_pages
 
 app = FastAPI(title='Приложение погоды')

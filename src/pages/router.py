@@ -1,7 +1,7 @@
 from fastapi import APIRouter, Request, Depends
 from fastapi.templating import Jinja2Templates
 
-from weather.utils import get_coordinates, get_forecast, get_forecast_weather
+from weather.utils import get_forecast_weather
 
 router_pages = APIRouter(prefix="/forecast_weather")
 

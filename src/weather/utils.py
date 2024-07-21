@@ -22,11 +22,12 @@ def get_coordinates(city: str):
         location = geolocator.geocode(city)
     except geopy.errors.GeocoderTimedOut:
         print("Ошибка при поиске местоположения")
+        return 'Ошибка при поиске местоположения'
     else:
         # Получаем координаты местоположения
         latitude = location.latitude
         longitude = location.longitude
-        print(f"Координаты местоположения: Latitude={latitude}, Longitude={longitude}")
+        #print(f"Координаты местоположения: Latitude={latitude}, Longitude={longitude}")
         return latitude, longitude
 
 
@@ -71,7 +72,7 @@ def get_forecast_weather(city):
         times = list_times[hour_now:] + list_times[:hour_now]
         if len(res_weather) == 24:
             res = list(zip(times, res_weather))
-            print(res)
+            #print(res)
             return res
         else:
             return [('', 'Произошла ошибка')]
