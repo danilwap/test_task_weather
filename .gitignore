@@ -1,2 +1,7 @@
 .idea
 src/__pycache__/
+__pycache__/
+src/.cache.sqlite
+src/config.py
+src/weather/.cache.sqlite
+src/weather/__pycache__/

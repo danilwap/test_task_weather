@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block head %}
+<script>
+  const searchForOperation = () => {
+        const searchInputValue = document.getElementById("operation_search").value;
+        window.location.href = `/forecast_weather/${searchInputValue}`;
+    }
+</script>
+{% endblock %}
+
+
+{% block content %}
+
+<label class="mt-3">Введите город и нажмите на кнопку:</label>
+<div class="d-flex justify-content-center mb-2">
+  <input type="search" class="d-flex form-control input-text mt-2" id="operation_search" placeholder="Москва">
+  <button onclick="searchForOperation()" class="d-flex justify-content-center rounded-3 border-2 p-1 mt-2">Узнать прогноз на 24 часа</button>
+</div>
+<hr class="mb-5">
+
+{% for weather in weathers %}
+        <div class="flex rounded-3 border-2 p-3 mt-3">
+            <div class="flex flex-col">
+                <p>{{ weather[0] }} - {{ weather[1] }}°</p>
+
+            </div>
+        </div>
+    {% endfor %}
+{% endblock content %}
